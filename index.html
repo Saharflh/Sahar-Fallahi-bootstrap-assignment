@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sahar Bootstrap Assignment</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Sahar-Persian-Carpets</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu"
+        aria-controls="menu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Products</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Title -->
+  <h1 class="text-center mt-5">Sahar's Bootstrap Project</h1>
+
+  <!-- Products -->
+<div class="container mt-5">
+<h2 class="text-center mb-4">Our Products</h2>
+
+<div class="row">
+
+<!-- Product 1 -->
+<div class="col-md-4 mb-4">
+<div class="card h-100">
+
+<img src="image/Dead-Carpet.jpeg" class="card-img-top">
+
+<div class="card-body">
+<h5 class="card-title">Dead Carpet</h5>
+<p class="card-text">Creative photography project.</p>
+
+<a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">
+View
+</a>
+
+</div>
+</div>
+</div>
+
+<!-- Product 2 -->
+<div class="col-md-4 mb-4">
+<div class="card h-100">
+
+<img src="image/porsche.jpeg" class="card-img-top">
+
+<div class="card-body">
+<h5 class="card-title">Porsche</h5>
+<p class="card-text">Automotive photography.</p>
+
+<a href="#" class="btn btn-primary">View</a>
+
+</div>
+</div>
+</div>
+
+<!-- Product 3 -->
+<div class="col-md-4 mb-4">
+<div class="card h-100">
+
+<img src="image/cheetah.jpeg" class="card-img-top">
+
+<div class="card-body">
+<h5 class="card-title">Cheetah Sanctuary</h5>
+<p class="card-text">Wildlife photography.</p>
+
+<a href="#" class="btn btn-primary">View</a>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Modal -->
+<div class="modal fade" id="productModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Dead Carpet</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <img src="image/Dead-Carpet.jpeg" class="img-fluid mb-3">
+        <p>This is a creative photography project featuring surreal carpet textures and fashion styling.</p>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
