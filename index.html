@@ -5,133 +5,208 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sahar Bootstrap Assignment</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- My Bootstrap CSS -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
   >
 
-  <!-- Your CSS -->
+  <!-- My CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    
+    /* Sidebar color */
+    .sidebar {
+      background-color: #460b12; /* burgundy */
+      min-height: 100vh;
+    }
+
+    .sidebar .nav-link {
+      color: white;
+    }
+
+    .sidebar .nav-link:hover {
+      color: #06d1ca;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="container-fluid">
+    <div class="row">
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-    <div class="container">
-      <a class="navbar-brand" href="#">Sahar-Persian-Carpets</a>
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#menu"
-        aria-controls="menu"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
+      <!-- Sidebar -->
+      <div class="col-md-2 sidebar text-white p-3">
+        <h4>Dashboard</h4>
+        <ul class="nav flex-column mt-4">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="#">Overview</a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link" href="#">Products</a>
+            <a class="nav-link" href="#">Tickets</a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#">Ideas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacts</a>
           </li>
         </ul>
       </div>
+
+      <!-- My Main Content -->
+      <div class="col-md-10 p-4">
+        <h2 class="mb-4">Overview</h2>
+
+        <!-- Top Cards -->
+        <div class="row g-3 mb-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card text-center p-3">
+              <small class="text-muted">Unresolved</small>
+              <h3>60</h3>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card text-center p-3 border-primary">
+              <small class="text-primary">Overdue</small>
+              <h3 class="text-primary">16</h3>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card text-center p-3">
+              <small class="text-muted">Open</small>
+              <h3>43</h3>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card text-center p-3">
+              <small class="text-muted">On hold</small>
+              <h3>64</h3>
+            </div>
+          </div>
+        </div>
+
+        <!--  Wow Today's Trends -->
+        <div class="card p-4 mb-4">
+          <div class="row">
+  <!-- Unresolved Tickets -->
+  <div class="col-md-8 mb-4">
+    <div class="card p-3">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="mb-0">Unresolved Tickets</h5>
+        <a href="#" class="text-decoration-none">View details</a>
+      </div>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between">
+          Waiting on Feature Request
+          <span>4238</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Awaiting Customer Response
+          <span>1005</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Awaiting Developer Fix
+          <span>914</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          Pending
+          <span>281</span>
+        </li>
+      </ul>
     </div>
-  </nav>
+  </div>
 
-  <!-- Title -->
-  <h1 class="text-center mt-5">Sahar's Bootstrap Project</h1>
+  <!-- My Tasks -->
+  <div class="col-md-4 mb-4">
+    <div class="card p-3">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="mb-0">Tasks</h5>
+        <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#ticketModal">View details</a>
+      </div>
 
-  <!-- Products -->
-<div class="container mt-5">
-<h2 class="text-center mb-4">Our Products</h2>
-
-<div class="row">
-
-<!-- Product 1 -->
-<div class="col-md-4 mb-4">
-<div class="card h-100">
-
-<img src="image/Dead-Carpet.jpeg" class="card-img-top">
-
-<div class="card-body">
-<h5 class="card-title">Dead Carpet</h5>
-<p class="card-text">Creative photography project.</p>
-
-<a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal">
-View
-</a>
-
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Finish ticket update</li>
+        <li class="list-group-item">Create new ticket example</li>
+        <li class="list-group-item">Update ticket report</li>
+      </ul>
+    </div>
+  </div>
 </div>
-</div>
-</div>
+          <h5>Today's Trends</h5>
 
-<!-- Product 2 -->
-<div class="col-md-4 mb-4">
-<div class="card h-100">
+          <div class="row mt-3">
+            <!--  Fancy Chart -->
+            <div class="col-md-8">
+              <div id="trendChart"></div>
+            </div>
 
-<img src="image/porsche.jpeg" class="card-img-top">
+            <!-- Stats -->
+            <div class="col-md-4">
+              <p><strong>Resolved:</strong> 449</p>
+              <p><strong>Received:</strong> 426</p>
+              <p><strong>Avg response time:</strong> 33m</p>
+              <p><strong>Avg resolution time:</strong> 3h 8m</p>
+              <p><strong>Resolution SLA:</strong> 94%</p>
+            </div>
+          </div>
+        </div>
 
-<div class="card-body">
-<h5 class="card-title">Porsche</h5>
-<p class="card-text">Automotive photography.</p>
+      </div>
+    </div>
+  </div>
 
-<a href="#" class="btn btn-primary">View</a>
+  <!-- ApexCharts -->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-</div>
-</div>
-</div>
+  <script>
+    var options = {
+      chart: {
+        type: 'line',
+        height: 250
+      },
+      series: [{
+        name: 'Tickets',
+        data: [10, 40, 25, 60, 45, 70, 55]
+      }],
+      xaxis: {
+        categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+      },
+      stroke: {
+        curve: 'smooth'
+      }
+    };
 
-<!-- Product 3 -->
-<div class="col-md-4 mb-4">
-<div class="card h-100">
-
-<img src="image/cheetah.jpeg" class="card-img-top">
-
-<div class="card-body">
-<h5 class="card-title">Cheetah Sanctuary</h5>
-<p class="card-text">Wildlife photography.</p>
-
-<a href="#" class="btn btn-primary">View</a>
-
-</div>
-</div>
-</div>
-
-</div>
-</div>
+    var chart = new ApexCharts(document.querySelector("#trendChart"), options);
+    chart.render();
+  </script>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Modal -->
-<div class="modal fade" id="productModal" tabindex="-1">
+
+
+<!-- Modal- detail-Persian carpets-->
+<div class="modal fade" id="ticketModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
 
       <div class="modal-header">
-        <h5 class="modal-title">Dead Carpet</h5>
+        <h5 class="modal-title">Ticket Details</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
 
       <div class="modal-body">
-        <img src="image/Dead-Carpet.jpeg" class="img-fluid mb-3">
-        <p>This is a creative photography project featuring surreal carpet textures and fashion styling.</p>
+        <img src="image/Dead-Carpet.jpeg" class="img-fluid mb-3" alt="ticket">
+        <p>Persian carpets are the finest in the world, combining exceptional quality, beauty, and timeless value</p>
       </div>
 
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
 
     </div>
