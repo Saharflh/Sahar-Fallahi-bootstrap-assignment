@@ -1,216 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sahar Bootstrap Assignment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overview Dashboard</title>
 
-  <!-- My Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
   <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    
   >
 
-  <!-- My CSS -->
+  <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    
-    /* Sidebar color */
-    .sidebar {
-      background-color: #460b12; /* burgundy */
-      min-height: 100vh;
-    }
-
-    .sidebar .nav-link {
-      color: white;
-    }
-
-    .sidebar .nav-link:hover {
-      color: #06d1ca;
-    }
-  </style>
 </head>
-
 <body>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row g-0">
 
       <!-- Sidebar -->
-      <div class="col-md-2 sidebar text-white p-3">
-        <h4>Dashboard</h4>
-        <ul class="nav flex-column mt-4">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Overview</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Tickets</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Ideas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contacts</a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- My Main Content -->
-      <div class="col-md-10 p-4">
-        <h2 class="mb-4">Overview</h2>
-
-        <!-- Top Cards -->
-        <div class="row g-3 mb-4">
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card text-center p-3">
-              <small class="text-muted">Unresolved</small>
-              <h3>60</h3>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card text-center p-3 border-primary">
-              <small class="text-primary">Overdue</small>
-              <h3 class="text-primary">16</h3>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card text-center p-3">
-              <small class="text-muted">Open</small>
-              <h3>43</h3>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card text-center p-3">
-              <small class="text-muted">On hold</small>
-              <h3>64</h3>
-            </div>
-          </div>
+      <aside class="col-12 col-md-3 col-lg-2 sidebar text-white p-4">
+        <div class="sidebar-brand mb-4">
+          <h2 class="h4 mb-0">Dashboard</h2>
         </div>
 
-        <!--  Wow Today's Trends -->
-        <div class="card p-4 mb-4">
-          <div class="row">
-  <!-- Unresolved Tickets -->
-  <div class="col-md-8 mb-4">
-    <div class="card p-3">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h5 class="mb-0">Unresolved Tickets</h5>
-        <a href="#" class="text-decoration-none">View details</a>
-      </div>
+        <nav aria-label="Sidebar navigation">
+          <ul class="nav flex-column gap-2">
+            <li class="nav-item">
+              <a class="nav-link sidebar-link active" href="#">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link sidebar-link" href="#">Tickets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link sidebar-link" href="#">Ideas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link sidebar-link" href="#">Contacts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link sidebar-link" href="#">Agents</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link sidebar-link" href="#">Articles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link sidebar-link" href="#">Settings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link sidebar-link" href="#">Subscription</a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
 
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item d-flex justify-content-between">
-          Waiting on Feature Request
-          <span>4238</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between">
-          Awaiting Customer Response
-          <span>1005</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between">
-          Awaiting Developer Fix
-          <span>914</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between">
-          Pending
-          <span>281</span>
-        </li>
-      </ul>
-    </div>
-  </div>
+      <!-- Main content -->
+      <main class="col-12 col-md-9 col-lg-10 p-3 p-md-4 main-content">
+        <!-- Header -->
+        <header class="d-flex justify-content-between align-items-center mb-4">
+          <h1 class="h2 mb-0">Overview</h1>
+          <div class="d-flex align-items-center gap-3">
+            <span class="small text-muted">Jones Ferdinand</span>
+            <img
+              src="https://via.placeholder.com/40"
+              alt="Profile"
+              class="rounded-circle"
+          
+            >
+          </div>
+        </header>
 
-  <!-- My Tasks -->
-  <div class="col-md-4 mb-4">
-    <div class="card p-3">
-      <div class="d-flex justify-content-between align-items-center mb-3">
-        <h5 class="mb-0">Tasks</h5>
-        <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#ticketModal">View details</a>
-      </div>
+        <!-- Top cards -->
+        <section class="mb-4" aria-label="Ticket summary">
+          <div class="row g-3">
+            <div class="col-12 col-sm-6 col-lg-3">
+              <article class="card ticket-card text-center p-3 h-100">
+                <p class="small text-muted mb-2">Unresolved</p>
+                <h2 class="h3 mb-0">60</h2>
+              </article>
+            </div>
 
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Finish ticket update</li>
-        <li class="list-group-item">Create new ticket example</li>
-        <li class="list-group-item">Update ticket report</li>
-      </ul>
-    </div>
-  </div>
-</div>
-          <h5>Today's Trends</h5>
+            <div class="col-12 col-sm-6 col-lg-3">
+              <article class="card ticket-card ticket-card-active text-center p-3 h-100">
+                <p class="small text-primary mb-2">Overdue</p>
+                <h2 class="h3 text-primary mb-0">16</h2>
+              </article>
+            </div>
 
-          <div class="row mt-3">
-            <!--  Fancy Chart -->
-            <div class="col-md-8">
+            <div class="col-12 col-sm-6 col-lg-3">
+              <article class="card ticket-card text-center p-3 h-100">
+                <p class="small text-muted mb-2">Open</p>
+                <h2 class="h3 mb-0">43</h2>
+              </article>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+              <article class="card ticket-card text-center p-3 h-100">
+                <p class="small text-muted mb-2">On hold</p>
+                <h2 class="h3 mb-0">64</h2>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Today's trends -->
+        <section class="card p-3 p-md-4 mb-4" aria-label="Today's trends">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div>
+              <h2 class="h4 mb-1">Today's Trends</h2>
+              <p class="small text-muted mb-0">as of 25 May 2019, 09:41 PM</p>
+            </div>
+          </div>
+
+          <div class="row g-4 align-items-start">
+            <div class="col-12 col-lg-8">
               <div id="trendChart"></div>
             </div>
 
-            <!-- Stats -->
-            <div class="col-md-4">
-              <p><strong>Resolved:</strong> 449</p>
-              <p><strong>Received:</strong> 426</p>
-              <p><strong>Avg response time:</strong> 33m</p>
-              <p><strong>Avg resolution time:</strong> 3h 8m</p>
-              <p><strong>Resolution SLA:</strong> 94%</p>
+            <div class="col-12 col-lg-4">
+              <div class="trend-stats">
+                <p><strong>Resolved:</strong> 449</p>
+                <p><strong>Received:</strong> 426</p>
+                <p><strong>Average first response time:</strong> 33m</p>
+                <p><strong>Average response time:</strong> 3h 8m</p>
+                <p><strong>Resolution within SLA:</strong> 94%</p>
+              </div>
             </div>
           </div>
+        </section>
+
+        <!-- Bottom section -->
+        <section aria-label="Tickets and tasks">
+          <div class="row g-4">
+            <!-- Unresolved tickets -->
+            <div class="col-12 col-xl-8">
+              <article class="card p-3 p-md-4 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div>
+                    <h2 class="h4 mb-1">Unresolved Tickets</h2>
+                    <p class="small text-muted mb-0">Group: Support</p>
+                  </div>
+                  <a
+                    href="#"
+                    class="text-decoration-none"
+                    data-bs-toggle="modal"
+                    data-bs-target="#ticketModal"
+                  >
+                    View details
+                  </a>
+                </div>
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Waiting on Feature Request</span>
+                    <span>4238</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Awaiting Customer Response</span>
+                    <span>1005</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Awaiting Developer Fix</span>
+                    <span>914</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Pending</span>
+                    <span>281</span>
+                  </li>
+                </ul>
+              </article>
+            </div>
+
+            <!-- Tasks -->
+            <div class="col-12 col-xl-4">
+              <article class="card p-3 p-md-4 h-100">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div>
+                    <h2 class="h4 mb-1">Tasks</h2>
+                    <p class="small text-muted mb-0">Today</p>
+                  </div>
+                  <a href="#" class="text-decoration-none">View all</a>
+                </div>
+
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Finish ticket update</li>
+                  <li class="list-group-item">Create new ticket example</li>
+                  <li class="list-group-item">Update ticket report</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="ticketModal"
+    tabindex="-1"
+    aria-labelledby="ticketModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="ticketModalLabel">Ticket Details</h2>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
 
+        <div class="modal-body">
+          <img
+            src="image/Dead-Carpet.jpeg"
+            class="img-fluid mb-3"
+            alt="Ticket detail"
+          >
+          <p class="mb-0">
+            Persian carpets are known for their quality, beauty, and timeless value.
+          </p>
+        </div>
+
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- ApexCharts -->
   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-
   <script>
-    var options = {
+    const options = {
       chart: {
-        type: 'line',
-        height: 250
+        type: "line",
+        height: 300,
+        toolbar: {
+          show: false
+        }
       },
-      series: [{
-        name: 'Tickets',
-        data: [10, 40, 25, 60, 45, 70, 55]
-      }],
+      series: [
+        {
+          name: "Today",
+          data: [10, 40, 25, 60, 45, 70, 55]
+        },
+        {
+          name: "Yesterday",
+          data: [15, 30, 35, 50, 40, 60, 50]
+        }
+      ],
       xaxis: {
-        categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        categories: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
       },
       stroke: {
-        curve: 'smooth'
+        curve: "smooth",
+        width: 3
+      },
+      dataLabels: {
+        enabled: false
+      },
+      legend: {
+        position: "top",
+        horizontalAlign: "right"
+      },
+      colors: ["#3751ff", "#dfe0eb"],
+      grid: {
+        borderColor: "#dfe0eb"
       }
     };
 
-    var chart = new ApexCharts(document.querySelector("#trendChart"), options);
+    const chart = new ApexCharts(document.querySelector("#trendChart"), options);
     chart.render();
   </script>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-
-<!-- Modal- detail-Persian carpets-->
-<div class="modal fade" id="ticketModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <div class="modal-header">
-        <h5 class="modal-title">Ticket Details</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <div class="modal-body">
-        <img src="image/Dead-Carpet.jpeg" class="img-fluid mb-3" alt="ticket">
-        <p>Persian carpets are the finest in the world, combining exceptional quality, beauty, and timeless value</p>
-      </div>
-
-      <div class="modal-footer">
-        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-
-    </div>
-  </div>
-</div>
 </body>
 </html>
